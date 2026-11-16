@@ -1,0 +1,550 @@
+
+/* ==========================================
+   1. GLOBAL RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+
+/* ==========================================
+   2. MAIN APPLICATION LAYOUT
+========================================== */
+
+.app-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: stretch;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 25px 30px;
+}
+
+
+/* ==========================================
+   3. SIDEBAR
+========================================== */
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px 16px;
+
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+}
+
+/* Brand */
+
+.sidebar-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 10px 12px;
+    margin-bottom: 30px;
+}
+
+.sidebar-brand span {
+    color: #2563eb;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.sidebar-brand small {
+    color: #64748b;
+    font-size: 11px;
+}
+
+/* Section Heading */
+
+.sidebar-section {
+    padding: 12px;
+    margin-bottom: 5px;
+
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Menu */
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 5px;
+}
+
+.sidebar-menu a,
+.sidebar-logout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    min-height: 44px;
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #475569;
+
+    font-family: inherit;
+    font-size: 14px;
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Consistent Icon Alignment */
+
+.sidebar-menu a span,
+.sidebar-logout span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+
+    font-size: 18px;
+}
+
+/* Hover */
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+/* Logout */
+
+.sidebar-menu form {
+    width: 100%;
+    margin: 0;
+}
+
+.sidebar-logout {
+    color: #dc2626;
+}
+
+.sidebar-logout:hover {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+/* Sidebar Footer */
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 18px 10px 5px;
+
+    border-top: 1px solid #e5e7eb;
+
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   4. TOP NAVBAR
+========================================== */
+
+.top-navbar {
+    width: 100%;
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 22px;
+    margin-bottom: 28px;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* Navbar Left */
+
+.navbar-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.navbar-left h3 {
+    color: #1e293b;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.navbar-left p {
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Navbar Right */
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-weight: 700;
+}
+
+.admin-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.admin-details strong {
+    color: #1e293b;
+    font-size: 13px;
+}
+
+.admin-details small {
+    color: #64748b;
+    font-size: 11px;
+}
+
+/* Navbar Logout */
+
+.navbar-right form {
+    margin: 0;
+}
+
+.logout-link {
+    padding: 9px 13px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: transparent;
+    color: #dc2626;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.logout-link:hover {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+
+/* ==========================================
+   5. DASHBOARD STATISTICS
+========================================== */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    padding: 22px;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.stat-card h4 {
+    margin-bottom: 12px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.stat-value {
+    color: #1e293b;
+    font-size: 27px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   6. TABLES
+========================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+th,
+td {
+    padding: 13px 15px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+th {
+    background: #f8fafc;
+    color: #475569;
+    font-size: 13px;
+}
+
+td {
+    color: #334155;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   7. BUTTONS
+========================================== */
+
+button,
+.btn {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-primary {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   8. RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+    }
+
+    .sidebar-footer {
+        margin-top: 20px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .top-navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .navbar-left h3 {
+        font-size: 16px;
+    }
+
+    .admin-details {
+        display: none;
+    }
+
+    .navbar-right {
+        gap: 10px;
+    }
+}
+
+/* ==========================================
+   NAVY SIDEBAR + TEAL ACCENTS
+========================================== */
+
+.sidebar {
+    background: #142B4A;
+    border-right: none;
+    color: #ffffff;
+}
+
+.sidebar-brand span {
+    color: #14B8A6;
+}
+
+.sidebar-brand small {
+    color: #cbd5e1;
+}
+
+.sidebar-section {
+    color: #94a3b8;
+}
+
+.sidebar-menu a {
+    color: #dbeafe;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: #1e4264;
+    color: #14B8A6;
+}
+
+.sidebar-menu a span {
+    color: #14B8A6;
+}
+
+.sidebar-logout {
+    color: #fca5a5;
+}
+
+.sidebar-logout:hover {
+    background: #1e4264;
+    color: #ffffff;
+}
+
+.sidebar-logout span {
+    color: #14B8A6;
+}
+
+.sidebar-footer {
+    border-top-color: #294461;
+    color: #cbd5e1;
+}
+
+/* Navbar */
+
+.top-navbar {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-bottom: 3px solid #14B8A6;
+}
+
+.navbar-left h3 {
+    color: #142B4A;
+}
+
+.admin-avatar {
+    background: #ccfbf1;
+    color: #0f766e;
+}
+
+.logout-link {
+    color: #142B4A;
+    border: 1px solid #14B8A6;
+    border-radius: 7px;
+}
+
+.logout-link:hover {
+    background: #14B8A6;
+    color: #ffffff;
+}
+/* Fix Employee Search visibility in sidebar */
+
+.sidebar-menu {
+    display: block !important;
+}
+
+.sidebar-menu li {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.sidebar-menu li a {
+    display: flex !important;
+    align-items: center;
+    visibility: visible !important;
+    color: #dbeafe !important;
+}
+
+.sidebar-menu li a:hover {
+    color: #14B8A6 !important;
+}
