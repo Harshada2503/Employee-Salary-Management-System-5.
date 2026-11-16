@@ -26,7 +26,7 @@ public class DBConfig {
 		dataSource.setUsername("root");
 
 		// Replace with your MySQL password
-dataSource.setPassword(System.getenv("DB_PASSWORD"));
+        dataSource.setPassword("DB_PASSWORD");
 
 		
 		return dataSource;
